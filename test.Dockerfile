@@ -1,7 +1,7 @@
 FROM haxe:latest
 WORKDIR /usr/src/app
 
-RUN apt update && apt install nodejs npm git 
+RUN apt update && apt install nodejs npm -y
 
 COPY res ./res
 COPY src ./src
