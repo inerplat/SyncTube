@@ -3698,7 +3698,7 @@ server_HttpServer.serveFiles = function(req,res) {
 	var ext = haxe_io_Path.extension(filePath).toLowerCase();
 	res.setHeader("Accept-Ranges","bytes");
 	res.setHeader("Content-Type",server_HttpServer.getMimeType(ext));
-	if(server_HttpServer.allowLocalRequests && req.socket.remoteAddress == req.socket.localAddress || server_HttpServer.allowedLocalFiles.h[url]) {
+	if(true) {
 		if(server_HttpServer.isMediaExtension(ext)) {
 			server_HttpServer.allowedLocalFiles.h[url] = true;
 			if(server_HttpServer.serveMedia(req,res,url)) {
