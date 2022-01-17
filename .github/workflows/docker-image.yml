@@ -29,5 +29,5 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       
       - name: Build Image
-        run: docker buildx build --platform linux/amd64,linux/arm64 -t inerplat/sync-tube:${{ steps.vars.outputs.tag }} --push .
+        run: docker buildx build -f test.Dockerfile --platform linux/amd64,linux/arm64 -t inerplat/sync-tube:${{ steps.vars.outputs.tag }} --push .
           
